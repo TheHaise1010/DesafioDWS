@@ -1,0 +1,22 @@
+<div class="body">
+    <div class="text-center h1">
+        <br>
+        <h1>Formulario de registro</h1>
+        <br>
+    </div>
+    
+    <div class="container">
+        <div class="form-row">
+            <label for="correo">Correo Electrónico</label>
+            <input type="email" class="form-control" id="correo" [(ngModel)]="correo" placeholder="Correo Electrónico" required>
+        </div>
+        <div class="form-row">
+            <label for="contrasena">Contraseña</label>
+            <input type="password" class="form-control" [(ngModel)]="password" id="contrasena" placeholder="Contraseña" required>
+        </div>
+        <div class="text-center">
+            <br>
+            <button type="submit" (click)="registro()" class="btn btn-primary">Registrarse</button>
+        </div>
+    </div>
+</div>
