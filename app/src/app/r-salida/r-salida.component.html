@@ -18,13 +18,9 @@
             <label for="monto">Monto</label>
             <input type="text" class="form-control" id="monto" placeholder="$0.00" required>
         </div>
-        <div class="form-row">
-            <label for="factura">Factura</label>
-            <input type="file" class="form-control" id="factura" name="factura" accept="image/*">
-        </div>
         <div class="text-center">
             <br>
-            <button type="submit" class="btn btn-primary">Añadir</button>
+            <button type="submit" (click)="postSalidas()" class="btn btn-primary">Añadir</button>
         </div>
     </div>
 </div>
