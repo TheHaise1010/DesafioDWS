@@ -1,1 +1,30 @@
-<p>r-salida works!</p>
+<div class="body">
+    <div class="text-center h1">
+        <br>
+        <h1>Registro de salida</h1>
+        <br>
+    </div>
+    
+    <div class="container">
+        <div class="form-row">
+            <label for="concepto">Concepto</label>
+            <input type="text" class="form-control" id="concepto" placeholder="Unos chimichangas" required>
+        </div>
+        <div class="form-row">
+            <label for="fecha">Fecha</label>
+            <input type="date" class="form-control" id="fecha" required>
+        </div>
+        <div class="form-row">
+            <label for="monto">Monto</label>
+            <input type="text" class="form-control" id="monto" placeholder="$0.00" required>
+        </div>
+        <div class="form-row">
+            <label for="factura">Factura</label>
+            <input type="file" class="form-control" id="factura" name="factura" accept="image/*">
+        </div>
+        <div class="text-center">
+            <br>
+            <button type="submit" class="btn btn-primary">Añadir</button>
+        </div>
+    </div>
+</div>
