@@ -16,4 +16,8 @@ export class SalidasService {
       monto:monto
     })
   }
+
+  getSalidas():Observable<any>{
+    return this.http.get<any>(this.apiUrl)
+  }
 }
