@@ -11,14 +11,14 @@
       </tr>
     </thead>
     <tbody>
-      <div> @for (entrada of entradas;track $index) { 
+      @for (entrada of entradas;track $index) { 
         <tr>
           <th scope="row">{{ entrada.id }}</th>
           <td>{{ entrada.concepto }}</td>
           <td>{{ entrada.monto | currency }}</td>
           <td><button (click)="openModal(entrada.factura)" type="button" class="btn btn-secondary">Ver factura</button></td>
         </tr>
-      } </div>
+      } 
     </tbody>
   </table>
 </div>
