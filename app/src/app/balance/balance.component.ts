@@ -17,6 +17,9 @@ export class BalanceComponent implements OnInit {
 
   salidas: any[] = [];
   entradas: any[] = [];
+  totalSalidas:number = 0;
+  totalEntradas:number = 0;
+  balance:Number = 0;
 
   constructor(private salidasService: SalidasService, private entradaService: EntradaService) {}
 
@@ -28,9 +31,16 @@ export class BalanceComponent implements OnInit {
     this.entradaService.getEntradas().subscribe(data => {
       this.entradas = data;
     });
+    this.getBalance();
   }
 
   getBalance():void{
-
+    for(let i = 0;i<this.entradas.length;i++){
+      this.totalEntradas = this.totalEntradas + this.entradas[i].monto;
+    }
+    for(let i = 0;i<this.salidas.length;i++){
+      this.totalSalidas = this.totalSalidas + this.salidas[i].monto;
+    }
+    this.balance = this.totalEntradas - this.totalSalidas;
   }
 }
