@@ -1,1 +1,34 @@
-<p>v-salida works!</p>
+<app-nav></app-nav>
+
+<div class="container">
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#Id</th>
+        <th scope="col">Concepto</th>
+        <th scope="col">Monto</th>
+        <th scope="col">Factura</th>
+      </tr>
+    </thead>
+    <tbody>
+    @for (salida of salidas;track $index) { 
+        <tr>
+          <th scope="row">{{ salida.id }}</th>
+          <td>{{ salida.concepto }}</td>
+          <td>{{ salida.monto | currency }}</td>
+          <td><button (click)="openModal(salida.factura)" type="button" class="btn btn-secondary">Ver factura</button></td>
+        </tr>
+      } 
+    </tbody>
+  </table>
+</div>
+
+@if (isModalOpen) {
+<div class="modal">
+
+        <div class="modal-content">
+            <span class="close" (click)="closeModal()">&times;</span>
+            <img [src]="selectedImageUrl" alt="Selected Image">
+        </div>
+</div>
+}

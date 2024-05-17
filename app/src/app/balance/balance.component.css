@@ -1,0 +1,22 @@
+.titulos {
+    margin-top: 10em;
+    display: flex;
+    justify-content: center; /* Para centrar horizontalmente con Flexbox */
+    /* Opción alternativa: */
+    /* text-align: center; */ /* Para centrar el texto dentro de los h4 */
+}
+
+.titulos h4 {
+    margin: 0 12em; /* Añade margen para separar los h4 */
+}
+.container{
+    display: flex;
+}
+
+.v-entrada{
+    width: 50%;
+}
+
+.v-salida{
+    width: 50%;
+}

@@ -8,19 +8,22 @@
     <div class="container">
         <div class="form-row">
             <label for="concepto">Concepto</label>
-            <input type="text" class="form-control" id="concepto" placeholder="Unos chimichangas" required>
+            <input type="text" class="form-control" [(ngModel)]="concepto" id="concepto" placeholder="Unos chimichangas" required>
         </div>
         <div class="form-row">
             <label for="fecha">Fecha</label>
-            <input type="date" class="form-control" id="fecha" required>
+            <input type="date" class="form-control"  [(ngModel)]="fecha" id="fecha" required>
         </div>
         <div class="form-row">
             <label for="monto">Monto</label>
-            <input type="text" class="form-control" id="monto" placeholder="$0.00" required>
+            <input type="text" class="form-control" id="monto"  [(ngModel)]="monto" placeholder="$0.00" required>
         </div>
         <div class="text-center">
             <br>
-            <button type="submit" (click)="postSalidas()" class="btn btn-primary">Añadir</button>
+            <button (click)="postSalidas()" type="submit" class="btn btn-primary">Añadir</button>
+            <br>
+            <br>
+            <a href="/nav"><button type="button" class="btn btn-secondary">Volver</button></a>
         </div>
     </div>
 </div>
